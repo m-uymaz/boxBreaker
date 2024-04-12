@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src//assets/styles/index.css">
+    <title>Box Game</title>
+</head>
+
+<body>
+    <h1 class="blinking">GAME OVER</br>!!!</h1>
+    <div id="main">
+        <div id="left-nav"></div>
+
+        <h2 id="combo">Combo <span id="combo-n"></span>!</h2>
+
+        <div id="playground"></div>
+        
+        <div id="right-nav">
+            <div id="fall-option">
+                <div>
+                    <label id="interval-label" for="interval">Fall Down</label>
+                </div>
+                <fieldset>
+                    <label for="fall-on">
+                        On
+                        <input type="radio" value="true" name="fallOption" id="fall-on">
+                    </label>
+                    <label for="fall-off">
+                        Off
+                        <input type="radio" value="false" name="fallOption" id="fall-off" checked>
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="./build/app.js"></script>
+</body>
+
+</html>

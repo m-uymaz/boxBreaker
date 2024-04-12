@@ -1,0 +1,140 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+
+#combo {
+    display: none;
+    color: white;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 2em;
+
+    text-align: center;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+#playground {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    position: relative;
+
+    max-width: 520px;
+    max-height: 1040px;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+
+.box {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.box-selected {
+    border: 3px solid black;
+    width: 46px;
+    height: 46px;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#right-nav {
+    display: inherit;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.5em;
+    color: white;
+}
+
+#fall-option {
+    text-align: center;
+}
+
+#left-nav {
+    width: 100%;
+}
+
+.blinking {
+    background-color: none;
+    display: none;
+    animation: blink 1s linear infinite;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    font-size: 4em;
+    text-align: center;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.arrow {
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../public/arrow_up.png');
+
+    animation: arrowAnimation 0.6s infinite;
+}
+
+@keyframes arrowAnimation {
+    50% {
+        background-position-y: 1%;
+    }
+}
+
+.box-explotion {
+    animation: explotion 0.1s linear;
+}
+
+@keyframes explotion {
+    0%,
+    99% {
+        background-image: url('../public/explotion.webp');
+        background-size: contain;
+    }
+
+    100% {
+        background-image: none;
+    }
+}
+
+.soon-to-explode {
+    animation: blinking-box 0.2s infinite;
+}
+
+@keyframes blinking-box {
+
+    0% {
+        opacity: 0.5;
+    } 25% {
+        opacity: 1;
+    } 50% {
+        opacity: 0.5;
+    } 75% {
+        opacity: 1;
+    } 100%
+}
